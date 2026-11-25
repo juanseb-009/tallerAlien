@@ -9,7 +9,7 @@ public class Aliens {
 	private double precioExtremidad;
 	private double precioOjo;
 	private double precioCuerpo;
-	
+
 	public Aliens(int tamanio, String color) {
 
 		// Validación del tamaño
@@ -29,6 +29,7 @@ public class Aliens {
 		this.precioExtremidad = this.tamanio * 0.10;
 		this.precioOjo = this.tamanio * 0.05;
 	}
+
 	public void imprimir() {
 
 		System.out.println("===== INFORMACIÓN DEL ALIEN =====");
@@ -44,41 +45,71 @@ public class Aliens {
 		System.out.println("Precio por ojo: $" + precioOjo);
 
 	}
-	
-	
-	
-	
+
+	// Método para agregar brazos
+	public boolean agregarBrazos(int cantidad) {
+
+		if (numeroBrazos + numeroPies + cantidad <= 10 && cantidad > 0) {
+
+			numeroBrazos += cantidad;
+
+			return true;
+
+		} else {
+
+			return false;
+
+		}
+
+	}
+
+	// Método para agregar piernas
+	public boolean agregarPiernas(int cantidad) {
+
+		if (numeroBrazos + numeroPies + cantidad <= 10 && cantidad > 0) {
+
+			numeroPies += cantidad;
+
+			return true;
+
+		} else {
+
+			return false;
+
+		}
+
+	}
+
 	public int getTamanio() {
 		return tamanio;
 	}
-	
-	
+
 	public String getColor() {
 		return color;
 	}
-	
+
 	public int getNumeroOjos() {
 		return numeroOjos;
 	}
-	
+
 	public int getNumeroBrazos() {
 		return numeroBrazos;
 	}
-	
+
 	public int getNumeroPies() {
 		return numeroPies;
 	}
-	
+
 	public double getPrecioExtremidad() {
 		return precioExtremidad;
 	}
-	
+
 	public double getPrecioOjo() {
 		return precioOjo;
 	}
-	
+
 	public double getPrecioCuerpo() {
 		return precioCuerpo;
 	}
-	
+
 }
