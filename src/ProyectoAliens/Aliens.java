@@ -79,6 +79,33 @@ public class Aliens {
 		}
 
 	}
+	
+	// Método para agregar ojos
+	public boolean agregarOjos(int cantidad) {
+
+		int maximoOjos;
+
+		if (tamanio >= 5 && tamanio <= 10) {
+			maximoOjos = 3;
+		} else if (tamanio > 10 && tamanio <= 20) {
+			maximoOjos = 5;
+		} else {
+			maximoOjos = 7;
+		}
+
+		if (numeroOjos + cantidad <= maximoOjos && cantidad > 0) {
+
+			numeroOjos += cantidad;
+
+			return true;
+
+		} else {
+
+			return false;
+
+		}
+
+	}
 
 	public int getTamanio() {
 		return tamanio;
